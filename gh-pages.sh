@@ -1,0 +1,1 @@
+git checkout -b gh-pages && npm run build && git add -f dist && git commit -m 'gh-pages'
