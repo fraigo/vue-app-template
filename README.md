@@ -1,4 +1,9 @@
-# vue-template2
+# vue-app-template
+
+## Html Preview
+
+https://fraigo.github.io/vue-app-template/
+
 
 ## Project setup
 ```
