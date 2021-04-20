@@ -7,11 +7,12 @@ const defaultState = {
   lastDate: ''
 }
 
-const ls = localStorage
+const storage = localStorage
+
 const prefix = 'app.'
 for (const key in defaultState) {
-  if (ls.getItem(prefix + key)) {
-    defaultState[key] = ls.getItem(prefix + key)
+  if (storage.getItem(prefix + key)) {
+    defaultState[key] = JSON.parse(storage.getItem(prefix + key))
   }
 }
 
@@ -26,7 +27,7 @@ export default new Vuex.Store({
   actions: {
     store: function () {
       for (const key in defaultState) {
-        ls.setItem(prefix + key, defaultState[key])
+        storage.setItem(prefix + key, JSON.stringify(defaultState[key]))
       }
     }
   }
