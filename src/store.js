@@ -14,7 +14,6 @@ for (const key in defaultState) {
     defaultState[key] = ls.getItem(prefix + key)
   }
 }
-console.log(defaultState)
 
 export default new Vuex.Store({
   state: defaultState,
